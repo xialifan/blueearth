@@ -26,13 +26,14 @@ public class MainActivity extends Activity {
             public void onClick(View v) {
                 String sdPath = Environment.getExternalStorageDirectory().getPath();
                 File file = new File(sdPath + "/dwg/dwg.dwg");
-                Intent intent = new Intent();
-                intent.setAction(Intent.ACTION_VIEW);
-                Uri uri = Uri.fromFile(file);
-                intent.addCategory("android.intent.category.DEFAULT");
-
-                intent.setDataAndType(uri, "application/dwg");
-                startActivity(intent);
+//                Intent intent = new Intent();
+//                intent.setAction(Intent.ACTION_VIEW);
+//                Uri uri = Uri.fromFile(file);
+//                intent.addCategory("android.intent.category.DEFAULT");
+//
+//                intent.setDataAndType(uri, "application/dwg");
+//                startActivity(intent);
+                OpenFileUtil.openFile(MainActivity.this,file,false);
 
 
             }

@@ -47,7 +47,8 @@ public class OpenFileUtil {
         Uri uri = Uri.fromFile(file);
 
 
-        String type = file.getName().split(".")[1]; //截取文件尾缀类型
+        Log.i("xlftest","file.getName():"+file.getName());
+        String type = file.getName().split("[.]")[1]; //截取文件尾缀类型
 
         String actionType = applicationTypeMap.get(type);
         if (actionType == null){
